@@ -8,19 +8,19 @@
  * file that was distributed with this source code.
  */
 
-namespace DirkGroenen\Pinterest;
+namespace 5baddi\Pinterest;
 
-use DirkGroenen\Pinterest\Auth\PinterestOAuth;
-use DirkGroenen\Pinterest\Utils\CurlBuilder;
-use DirkGroenen\Pinterest\Transport\Request;
-use DirkGroenen\Pinterest\Exceptions\InvalidEndpointException;
+use 5baddi\Pinterest\Auth\PinterestOAuth;
+use 5baddi\Pinterest\Utils\CurlBuilder;
+use 5baddi\Pinterest\Transport\Request;
+use 5baddi\Pinterest\Exceptions\InvalidEndpointException;
 
 /**
- * @property \DirkGroenen\Pinterest\Endpoints\Boards boards
- * @property \DirkGroenen\Pinterest\Endpoints\Following following
- * @property \DirkGroenen\Pinterest\Endpoints\Pins pins
- * @property \DirkGroenen\Pinterest\Endpoints\Users users
- * @property \DirkGroenen\Pinterest\Endpoints\Sections sections
+ * @property \5baddi\Pinterest\Endpoints\Boards boards
+ * @property \5baddi\Pinterest\Endpoints\Following following
+ * @property \5baddi\Pinterest\Endpoints\Pins pins
+ * @property \5baddi\Pinterest\Endpoints\Users users
+ * @property \5baddi\Pinterest\Endpoints\Sections sections
  */
 class Pinterest {
 
@@ -77,7 +77,7 @@ class Pinterest {
     public function __get($endpoint)
     {
         $endpoint = strtolower($endpoint);
-        $class = "\\DirkGroenen\\Pinterest\\Endpoints\\" . ucfirst($endpoint);
+        $class = "\\5baddi\\Pinterest\\Endpoints\\" . ucfirst($endpoint);
 
         // Check if an instance has already been initiated
         if (!isset($this->cachedEndpoints[$endpoint])) {

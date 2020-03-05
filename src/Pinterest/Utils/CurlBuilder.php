@@ -8,9 +8,9 @@
  * file that was distributed with this source code.
  */
 
-namespace DirkGroenen\Pinterest\Utils;
+namespace 5baddi\Pinterest\Utils;
 
-use DirkGroenen\Pinterest\Exceptions\PinterestException;
+use 5baddi\Pinterest\Exceptions\PinterestException;
 
 class CurlBuilder {
 

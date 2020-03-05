@@ -8,10 +8,10 @@
  * file that was distributed with this source code.
  */
 
-namespace DirkGroenen\Pinterest\Endpoints;
+namespace 5baddi\Pinterest\Endpoints;
 
-use DirkGroenen\Pinterest\Models\Section;
-use DirkGroenen\Pinterest\Models\Collection;
+use 5baddi\Pinterest\Models\Section;
+use 5baddi\Pinterest\Models\Collection;
 
 class Sections extends Endpoint {
 
@@ -21,7 +21,7 @@ class Sections extends Endpoint {
      * @access public
      * @param  string   $board
      * @param  array    $data
-     * @throws \DirkGroenen\Pinterest\Exceptions\PinterestException
+     * @throws \5baddi\Pinterest\Exceptions\PinterestException
      * @return Section
      */
     public function create(string $board, array $data)
@@ -36,7 +36,7 @@ class Sections extends Endpoint {
      * @access public
      * @param  string   $board
      * @param  array    $data
-     * @throws \DirkGroenen\Pinterest\Exceptions\PinterestException
+     * @throws \5baddi\Pinterest\Exceptions\PinterestException
      * @return Collection<Section>
      */
     public function get(string $board, array $data = [])
@@ -53,7 +53,7 @@ class Sections extends Endpoint {
      * @access public
      * @param  string   $section
      * @param  array    $data
-     * @throws \DirkGroenen\Pinterest\Exceptions\PinterestException
+     * @throws \5baddi\Pinterest\Exceptions\PinterestException
      * @return Collection<Pin>
      */
     public function pins(string $section, array $data = [])
@@ -67,7 +67,7 @@ class Sections extends Endpoint {
      *
      * @access public
      * @param  string   $section
-     * @throws \DirkGroenen\Pinterest\Exceptions\PinterestException
+     * @throws \5baddi\Pinterest\Exceptions\PinterestException
      * @return Collection<Pin>
      */
     public function delete($section)

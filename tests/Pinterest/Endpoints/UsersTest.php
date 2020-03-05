@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace DirkGroenen\Pinterest\Tests\Endpoints;
+namespace 5baddi\Pinterest\Tests\Endpoints;
 
-use \DirkGroenen\Pinterest\Pinterest;
-use \DirkGroenen\Pinterest\Tests\Utils\CurlBuilderMock;
+use \5baddi\Pinterest\Pinterest;
+use \5baddi\Pinterest\Tests\Utils\CurlBuilderMock;
 
 class UsersTest extends \PHPUnit\Framework\TestCase
 {
@@ -42,7 +42,7 @@ class UsersTest extends \PHPUnit\Framework\TestCase
     {
         $response = $this->pinterest->users->me();
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\User", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\User", $response);
         $this->assertEquals($response->id, "503066358284560467");
     }
 
@@ -50,7 +50,7 @@ class UsersTest extends \PHPUnit\Framework\TestCase
     {
         $response = $this->pinterest->users->find('dirkgroenen');
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\User", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\User", $response);
         $this->assertEquals($response->id, "503066358284560467");
     }
 
@@ -59,7 +59,7 @@ class UsersTest extends \PHPUnit\Framework\TestCase
      */
     public function testFindInValidUserAndThrowException()
     {
-        $this->expectException(\DirkGroenen\Pinterest\Exceptions\PinterestException::class);
+        $this->expectException(\5baddi\Pinterest\Exceptions\PinterestException::class);
 
         $this->pinterest->users->find('randomnonexistinguserwhichdoesntexist1234');
     }
@@ -68,8 +68,8 @@ class UsersTest extends \PHPUnit\Framework\TestCase
     {
         $response = $this->pinterest->users->getMePins();
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Collection", $response);
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Pin", $response->get(0));
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Collection", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Pin", $response->get(0));
         $this->assertEquals($response->get(0)->id, "503066220854919493");
     }
 
@@ -86,24 +86,24 @@ class UsersTest extends \PHPUnit\Framework\TestCase
     {
         $response = $this->pinterest->users->searchMePins("design");
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Collection", $response);
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Pin", $response->get(0));
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Collection", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Pin", $response->get(0));
     }
 
     public function testSearchMeBoards()
     {
         $response = $this->pinterest->users->searchMeBoards("test");
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Collection", $response);
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Board", $response->get(0));
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Collection", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Board", $response->get(0));
     }
 
     public function testGetMeBoards()
     {
         $response = $this->pinterest->users->getMeBoards();
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Collection", $response);
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Board", $response->get(0));
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Collection", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Board", $response->get(0));
         $this->assertEquals($response->pagination, false);
     }
 
@@ -111,8 +111,8 @@ class UsersTest extends \PHPUnit\Framework\TestCase
     {
         $response = $this->pinterest->users->getMeLikes();
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Collection", $response);
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Pin", $response->get(0));
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Collection", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Pin", $response->get(0));
         $this->assertFalse($response->pagination);
     }
 
@@ -120,8 +120,8 @@ class UsersTest extends \PHPUnit\Framework\TestCase
     {
         $response = $this->pinterest->users->getMeFollowers();
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Collection", $response);
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\User", $response->get(0));
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Collection", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\User", $response->get(0));
         $this->assertNotFalse($response->pagination);
     }
 }

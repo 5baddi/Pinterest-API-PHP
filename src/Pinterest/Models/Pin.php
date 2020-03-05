@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace DirkGroenen\Pinterest\Models;
+namespace 5baddi\Pinterest\Models;
 
 class Pin extends Model {
         

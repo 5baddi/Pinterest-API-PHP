@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace DirkGroenen\Pinterest\Tests\Utils;
+namespace 5baddi\Pinterest\Tests\Utils;
 
 class CurlBuilderMock {
 
@@ -43,7 +43,7 @@ class CurlBuilderMock {
             $responsefile = [$instance->getName()];
 
         // Setup Curlbuilder mock
-        $curlbuilder = $instance->getMockBuilder("\\DirkGroenen\\Pinterest\\Utils\\CurlBuilder")
+        $curlbuilder = $instance->getMockBuilder("\\5baddi\\Pinterest\\Utils\\CurlBuilder")
                         ->getMock();
 
         $curlbuilder->expects($instance->any())

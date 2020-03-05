@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace DirkGroenen\Pinterest\Tests\Endpoints;
+namespace 5baddi\Pinterest\Tests\Endpoints;
 
-use \DirkGroenen\Pinterest\Pinterest;
-use \DirkGroenen\Pinterest\Tests\Utils\CurlBuilderMock;
+use \5baddi\Pinterest\Pinterest;
+use \5baddi\Pinterest\Tests\Utils\CurlBuilderMock;
 
 class FollowingTest extends \PHPUnit\Framework\TestCase
 {
@@ -42,24 +42,24 @@ class FollowingTest extends \PHPUnit\Framework\TestCase
     {
         $response = $this->pinterest->following->users();
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Collection", $response);
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\User", $response->get(0));
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Collection", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\User", $response->get(0));
     }
 
     public function testInterests()
     {
         $response = $this->pinterest->following->interests();
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Collection", $response);
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Interest", $response->get(0));
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Collection", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Interest", $response->get(0));
     }
 
     public function testBoards()
     {
         $response = $this->pinterest->following->boards();
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Collection", $response);
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Board", $response->get(0));
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Collection", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Board", $response->get(0));
     }
 
     public function testFollowUser()
@@ -96,8 +96,8 @@ class FollowingTest extends \PHPUnit\Framework\TestCase
             "cursor"    => "Pz8wMDA5NzZiMmJmYzYyYmQ5NDE0ZTFkYmMxMzIwMDc2Ynw1N2ZmMGQ4ZGRiZjMxMjQ5YjAwMmY5MGI3ZTI3NTBjNzZmNTQ4ZmFiNjNiOWYxNzE2MjdkNzgxNmMwZDNkNzFi"
         ));
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Collection", $response);
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Interest", $response->get(0));
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Collection", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Interest", $response->get(0));
         $this->assertEquals($response->get(0)->id, "932253650197");
     }
 }

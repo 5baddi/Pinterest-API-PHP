@@ -1,5 +1,5 @@
 {
-    "name": "dirkgroenen/pinterest-api-php",
+    "name": "5baddi/pinterest-api-php",
     "description": "PHP Wrapper for the official Pinterest API",
     "authors": [
         {
@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "DirkGroenen\\Pinterest\\": "src/Pinterest"
+            "5baddi\\Pinterest\\": "src/Pinterest"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "DirkGroenen\\Pinterest\\Tests\\": "tests/Pinterest"
+            "5baddi\\Pinterest\\Tests\\": "tests/Pinterest"
         }
     }
 }

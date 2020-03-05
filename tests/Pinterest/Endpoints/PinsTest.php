@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace DirkGroenen\Pinterest\Tests\Endpoints;
+namespace 5baddi\Pinterest\Tests\Endpoints;
 
-use \DirkGroenen\Pinterest\Pinterest;
-use \DirkGroenen\Pinterest\Tests\Utils\CurlBuilderMock;
+use \5baddi\Pinterest\Pinterest;
+use \5baddi\Pinterest\Tests\Utils\CurlBuilderMock;
 
 class PinsTest extends \PHPUnit\Framework\TestCase
 {
@@ -42,7 +42,7 @@ class PinsTest extends \PHPUnit\Framework\TestCase
     {
         $response = $this->pinterest->pins->get("181692166190246650");
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Pin", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Pin", $response);
         $this->assertEquals($response->id, "181692166190246650");
     }
 
@@ -50,8 +50,8 @@ class PinsTest extends \PHPUnit\Framework\TestCase
     {
         $response = $this->pinterest->pins->fromBoard("503066289565421201");
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Collection", $response);
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Pin", $response->get(0));
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Collection", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Pin", $response->get(0));
     }
 
     public function testCreate()
@@ -62,7 +62,7 @@ class PinsTest extends \PHPUnit\Framework\TestCase
             "board"     => "503066289565421201"
         ));
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Pin", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Pin", $response);
         $this->assertEquals($response->id, "503066220854919983");
     }
 
@@ -72,7 +72,7 @@ class PinsTest extends \PHPUnit\Framework\TestCase
             "note"      => "Test pin from API wrapper - update"
         ));
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Pin", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Pin", $response);
         $this->assertEquals($response->id, "503066220854919983");
     }
 

@@ -8,12 +8,12 @@
  * file that was distributed with this source code.
  */
 
-namespace DirkGroenen\Pinterest\Models;
+namespace 5baddi\Pinterest\Models;
 
-use DirkGroenen\Pinterest\Exceptions\PinterestException;
+use 5baddi\Pinterest\Exceptions\PinterestException;
 
-use \DirkGroenen\Pinterest\Pinterest;
-use \DirkGroenen\Pinterest\Transport\Response;
+use \5baddi\Pinterest\Pinterest;
+use \5baddi\Pinterest\Transport\Response;
 
 class Collection implements \JsonSerializable, \ArrayAccess, \IteratorAggregate{
 
@@ -67,7 +67,7 @@ class Collection implements \JsonSerializable, \ArrayAccess, \IteratorAggregate{
         // Create class path
         $this->model = ucfirst(strtolower($model));
 
-        if (!class_exists("\\DirkGroenen\\Pinterest\\Models\\" . $this->model)) {
+        if (!class_exists("\\5baddi\\Pinterest\\Models\\" . $this->model)) {
             throw new InvalidModelException;
         }
 
@@ -75,7 +75,7 @@ class Collection implements \JsonSerializable, \ArrayAccess, \IteratorAggregate{
         if (is_array($items)) {
             $this->response = null;
             $this->items = $items;
-        } else if ($items instanceof \DirkGroenen\Pinterest\Transport\Response) {
+        } else if ($items instanceof \5baddi\Pinterest\Transport\Response) {
             $this->response = $items;
             $this->items = $items->data;
         } else {
@@ -116,7 +116,7 @@ class Collection implements \JsonSerializable, \ArrayAccess, \IteratorAggregate{
         $modelcollection = [];
 
         foreach ($items as $item) {
-            $class = new \ReflectionClass("\\DirkGroenen\\Pinterest\\Models\\" . $this->model);
+            $class = new \ReflectionClass("\\5baddi\\Pinterest\\Models\\" . $this->model);
             $modelcollection[] = $class->newInstanceArgs([$this->master, $item]);
         }
 

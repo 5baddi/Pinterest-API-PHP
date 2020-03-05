@@ -8,9 +8,9 @@
  * file that was distributed with this source code.
  */
 
-namespace DirkGroenen\Pinterest\Endpoints;
+namespace 5baddi\Pinterest\Endpoints;
 
-use DirkGroenen\Pinterest\Models\Board;
+use 5baddi\Pinterest\Models\Board;
 
 class Boards extends Endpoint {
 

@@ -8,10 +8,10 @@
  * file that was distributed with this source code.
  */
 
-namespace DirkGroenen\Pinterest\Endpoints;
+namespace 5baddi\Pinterest\Endpoints;
 
-use DirkGroenen\Pinterest\Models\User;
-use DirkGroenen\Pinterest\Models\Collection;
+use 5baddi\Pinterest\Models\User;
+use 5baddi\Pinterest\Models\Collection;
 
 class Following extends Endpoint {
 

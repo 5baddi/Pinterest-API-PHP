@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace DirkGroenen\Pinterest\Tests\Endpoints;
+namespace 5baddi\Pinterest\Tests\Endpoints;
 
-use \DirkGroenen\Pinterest\Pinterest;
-use \DirkGroenen\Pinterest\Tests\Utils\CurlBuilderMock;
+use \5baddi\Pinterest\Pinterest;
+use \5baddi\Pinterest\Tests\Utils\CurlBuilderMock;
 
 class BoardsTest extends \PHPUnit\Framework\TestCase
 {
@@ -42,7 +42,7 @@ class BoardsTest extends \PHPUnit\Framework\TestCase
     {
         $response = $this->pinterest->boards->get("503066289565421201");
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Board", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Board", $response);
         $this->assertEquals($response->id, "503066289565421201");
     }
 
@@ -52,7 +52,7 @@ class BoardsTest extends \PHPUnit\Framework\TestCase
             "fields" => "url,description,creator,counts"
         ));
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Board", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Board", $response);
         $this->assertTrue(isset($response->creator['first_name']));
     }
 
@@ -63,7 +63,7 @@ class BoardsTest extends \PHPUnit\Framework\TestCase
             "description"   => "Test Board From API Test"
         ));
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Board", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Board", $response);
         $this->assertEquals($response->id, "503066289565421205");
     }
 
@@ -73,7 +73,7 @@ class BoardsTest extends \PHPUnit\Framework\TestCase
             "name"          => "Test board from API"
         ));
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Board", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Board", $response);
         $this->assertEquals($response->id, "503066289565421205");
     }
 

@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace DirkGroenen\Pinterest\Tests\Endpoints;
+namespace 5baddi\Pinterest\Tests\Endpoints;
 
-use \DirkGroenen\Pinterest\Pinterest;
-use \DirkGroenen\Pinterest\Tests\Utils\CurlBuilderMock;
+use \5baddi\Pinterest\Pinterest;
+use \5baddi\Pinterest\Tests\Utils\CurlBuilderMock;
 
 class CollectionTest extends \PHPUnit\Framework\TestCase
 {
@@ -45,7 +45,7 @@ class CollectionTest extends \PHPUnit\Framework\TestCase
     {
         $response = $this->pinterest->following->interests();
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Collection", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Collection", $response);
         $this->assertTrue(is_array($response->all()));
     }
 
@@ -56,8 +56,8 @@ class CollectionTest extends \PHPUnit\Framework\TestCase
     {
         $response = $this->pinterest->following->interests();
 
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Collection", $response);
-        $this->assertInstanceOf("DirkGroenen\Pinterest\Models\Interest", $response->get(1));
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Collection", $response);
+        $this->assertInstanceOf("5baddi\Pinterest\Models\Interest", $response->get(1));
         $this->assertEquals($response->get(1)->id, "955147773988");
     }
 

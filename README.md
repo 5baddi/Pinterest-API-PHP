@@ -30,7 +30,7 @@ If you're not using Composer (which you should start using, unless you've got a 
 
 ## Simple Example
 ```php
-use DirkGroenen\Pinterest\Pinterest;
+use 5baddi\Pinterest\Pinterest;
 
 $pinterest = new Pinterest(CLIENT_ID, CLIENT_SECRET);
 ```

@@ -8,9 +8,9 @@
  * file that was distributed with this source code.
  */
 
-namespace DirkGroenen\Pinterest\Models;
+namespace 5baddi\Pinterest\Models;
 
-use DirkGroenen\Pinterest\Endpoints\Boards;
+use 5baddi\Pinterest\Endpoints\Boards;
 
 class User extends Model {
         

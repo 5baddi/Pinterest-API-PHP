@@ -8,10 +8,10 @@
  * file that was distributed with this source code.
  */
 
-namespace DirkGroenen\Pinterest\Endpoints;
+namespace 5baddi\Pinterest\Endpoints;
 
-use DirkGroenen\Pinterest\Models\Pin;
-use DirkGroenen\Pinterest\Models\Collection;
+use 5baddi\Pinterest\Models\Pin;
+use 5baddi\Pinterest\Models\Collection;
 
 class Pins extends Endpoint {
 
@@ -21,7 +21,7 @@ class Pins extends Endpoint {
      * @access public
      * @param  string   $pin_id
      * @param array     $data
-     * @throws \DirkGroenen\Pinterest\Exceptions\PinterestException
+     * @throws \5baddi\Pinterest\Exceptions\PinterestException
      * @return Pin
      */
     public function get($pin_id, array $data = [])
@@ -36,7 +36,7 @@ class Pins extends Endpoint {
      * @access public
      * @param  string   $board_id
      * @param array     $data
-     * @throws \DirkGroenen\Pinterest\Exceptions\PinterestException
+     * @throws \5baddi\Pinterest\Exceptions\PinterestException
      * @return Collection
      */
     public function fromBoard($board_id, array $data = [])
@@ -50,7 +50,7 @@ class Pins extends Endpoint {
      *
      * @access public
      * @param  array    $data
-     * @throws \DirkGroenen\Pinterest\Exceptions\PinterestException
+     * @throws \5baddi\Pinterest\Exceptions\PinterestException
      * @return Pin
      */
     public function create(array $data)
@@ -74,7 +74,7 @@ class Pins extends Endpoint {
      * @param  string   $pin_id
      * @param  array    $data
      * @param  string   $fields
-     * @throws \DirkGroenen\Pinterest\Exceptions\PinterestException
+     * @throws \5baddi\Pinterest\Exceptions\PinterestException
      * @return Pin
      */
     public function edit($pin_id, array $data, $fields = null)
@@ -90,7 +90,7 @@ class Pins extends Endpoint {
      *
      * @access public
      * @param  string   $pin_id
-     * @throws \DirkGroenen\Pinterest\Exceptions\PinterestException
+     * @throws \5baddi\Pinterest\Exceptions\PinterestException
      * @return boolean
      */
     public function delete($pin_id)
